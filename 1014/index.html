@@ -6,89 +6,33 @@
     <style>
         body {
             background: #f5f6fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             font-family: 'Segoe UI', Arial, sans-serif;
         }
         .card {
             display: flex;
-            background: #fff;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-            border-radius: 20px;
-            overflow: hidden;
-            width: 420px;
-            height: 220px;
-        }
-        .card-left {
-            background: linear-gradient(135deg, #eda76d 0%, #f3a069 100%);
-            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 40%;
+            height: 100vh;
         }
-        .avatar {
-            width: 110px;
-            height: 110px;
-            /* border-radius: 50%; */
-            overflow: hidden;
-            border: 4px solid #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-            /* 使用 clip-path 製作正五邊形遮罩 */
-            clip-path: polygon(
-                50% 0%,
-                95% 38%,
-                77% 90%,
-                23% 90%,
-                5% 38%
-            );
+        .image-container {
+            
         }
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .card-right {
-            padding: 32px 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 60%;
-        }
-        .name {
-            font-size: 1.6em;
-            font-weight: bold;
-            color: #665025;
-            margin-bottom: 8px;
-        }
-        .title {
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 16px;
-        }
-        .info {
-            font-size: 0.98em;
-            color: #888;
-            line-height: 1.7;
+        .image-container img {
+            max-width: 90%;
+            max-height: 40vh;
+            height: auto;
+            width: auto;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="card-left">
-            <div class="avatar">
-                <img src="../111.jpg" alt="個人照片">
-            </div>
+        <div class="image-container">
+            <img src="namecard01.jpg" alt="圖片1">
         </div>
-        <div class="card-right">
-            <div class="name">林芮綺</div>
-            <div class="title">前端工程師</div>
-            <div class="info">
-                電子郵件：linruqi@example.com<br>
-                電話：0933-123-678<br>
-                地址：台北市大安區
-            </div>
+        <div class="image-container">
+            <img src="namecard02.jpg" alt="圖片2">
         </div>
     </div>
 </body>
