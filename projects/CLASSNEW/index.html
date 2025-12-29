@@ -5,6 +5,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<style>
+  /* 統一課程頁面縮圖排版：固定高度並裁切以保持整齊 */
+  .class-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* 降低飽和度：1 = 原始，<1 使顏色較不飽和 */
+    filter: saturate(0.85);
+    display: block;
+  }
+  /* 在小螢幕上可增加圖片高度 */
+  @media (max-width: 600px) {
+    .class-grid img { height: 180px; }
+  }
+  /* 頁面底色與頁尾自訂顏色 */
+  body { background: rgb(242,242,242); }
+  .custom-footer { background: rgb(90,90,90); color: #fff; }
+  /* 提高優先權以覆寫外部框架樣式，並固定 footer 連結顏色 */
+  footer.custom-footer { background: rgb(90,90,90) !important; }
+  footer.custom-footer a, footer.custom-footer a:visited { color: #fff !important; }
+  footer.custom-footer a:hover { color: #fff !important; text-decoration: underline; }
+  /* 覆寫八個區塊底下按鈕的顏色 */
+  .class-grid .w3-button.w3-light-grey {
+    background: rgb(153,153,153) !important;
+    color: #fff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+  }
+  .class-grid .w3-button.w3-light-grey:hover {
+    background: rgb(133,133,133) !important;
+    color: #fff !important;
+  }
+</style>
 </head>
 <body>
 
@@ -18,11 +50,28 @@
 </div>
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="PHOTO.jpg" alt="Architecture" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>網站設計與賞析<br>課程成果作品展示</b></span>
-  </div>
+<style>
+  .header-caption {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  @media (max-width: 600px) {
+    .header-caption { font-size: 0.95rem; padding:6px 10px; }
+  }
+</style>
+
+<header class="w3-display-container w3-content w3-wide" style="position:relative; max-width:1564px; margin:0 auto;" id="home">
+  <img class="w3-image" src="design.jpg" alt="Architecture" style="width:100%; height:auto; display:block;">
+  <div class="header-caption">網站設計與賞析_課程成果作品展示</div>
+
 </header>
 
 <!-- Page content -->
@@ -31,67 +80,80 @@
   <!-- About Section -->
   
   <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat.
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">關於這堂課程:
+
+    </h3>
+    <p>「本課程為通識教育中的『數位科技與傳播』領域，核心目標是帶領非資訊專業的學生建立對現代網頁開發的基礎認知。<br><br>
+
+課程內容涵蓋了網頁結構（HTML）、視覺樣式（CSS）以及基礎互動邏輯（JavaScript）的導論。透過這門課，我並非要成為專業的程式開發者，而是旨在培養數位時代的資訊素養。<br><br>
+
+學習過程中，我逐步理解了網站從無到有的建構邏輯，並學會如何以專業的角度去『賞析』一個網頁的優劣。這份期末作業是我將課堂所學的基礎理論，轉化為實際操作的初步嘗試，不僅讓我掌握了基礎的網頁編輯技術，也提升了我在數位工具應用上的信心。」<br><br>
+任課教師 : 張循鋰
     </p>
+    <br><br>
   </div>
 
-  <div class="w3-row-padding w3-grayscale">
+  <div class="w3-row-padding class-grid">
      <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="001.jpg" alt="Jane" style="width:100%">
-      <p><a href="https://s111407015-alt.github.io/old.index.html" class="w3-button w3-light-grey w3-block">唐詩 x 表格練習</a></p>
+      <img src="POEM01.jpg" alt="Jane" style="width:100%">
+      <p><a href="file:///C:/Users/user/Desktop/111407015/s111407015-alt.github.io/POEM/old.index.html" class="w3-button w3-light-grey w3-block">唐詩 x 表格練習</a></p>
     </div>
 
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="001.jpg" alt="Jane" style="width:100%">
+      <img src="SEA.jpg" alt="Jane" style="width:100%">
       <p><a href="https://s111407015-alt.github.io/1007/index.html" class="w3-button w3-light-grey w3-block">表格 x 圖片練習</a></p>
     </div>
-    
+
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="001.jpg" alt="Jane" style="width:100%">
+      <img src="ME.jpg" alt="Jane" style="width:100%">
+      <p><a href="https://sites.google.com/stu.ntue.edu.tw/linjuichi/%E9%A6%96%E9%A0%81" class="w3-button w3-light-grey w3-block">協作平台初體驗</a></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="CAKE.jpg" alt="Jane" style="width:100%">
       <p><a href="https://s111407015-alt.github.io/1021/" class="w3-button w3-light-grey w3-block">提拉米蘇訂購</a></p>
     </div>
 
      <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="001.jpg" alt="Jane" style="width:100%">
-      <p><a href="https://s111407015-alt.github.io/111801/index.html" class="w3-button w3-light-grey w3-block">資訊科技競賽</a></p>
+      <img src="tech.jpg" alt="Jane" style="width:100%">
+      <p><a href="https://s111407015-alt.github.io/111801/index.html" class="w3-button w3-light-grey w3-block">資訊科技競賽資訊</a></p>
     </div>
 
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="001.jpg" alt="Jane" style="width:100%">
-      <p><a href="https://s111407015-alt.github.io/1014/index.html" class="w3-button w3-light-grey w3-block">名片</a></p>
+      <img src="NAMEEE.jpg" alt="Jane" style="width:100%">
+      <p><a href="file:///C:/Users/user/Desktop/111407015/s111407015-alt.github.io/1014/index.html" class="w3-button w3-light-grey w3-block">個人名片設計</a></p>
     </div>
 
     
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="001.jpg" alt="Jane" style="width:100%">
-      <p><a href="https://s111407015-alt.github.io/1007/index.html" class="w3-button w3-light-grey w3-block">聖誕</a></p>
+      <img src="MERRY.jpg" alt="Jane" style="width:100%">
+      <p><a href="https://sites.google.com/stu.ntue.edu.tw/cheese/%E9%A6%96%E9%A0%81" class="w3-button w3-light-grey w3-block">聖誕活動資訊</a></p>
     </div>
 
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="001.jpg" alt="Jane" style="width:100%">
-      <p><a href="https://s111407015-alt.github.io/1index.html" class="w3-button w3-light-grey w3-block">貓貓品種</a></p>
+      <img src="CATT.jpg" alt="Jane" style="width:100%">
+      <p><a href="https://s111407015-alt.github.io/cat/cat.index.html" class="w3-button w3-light-grey w3-block">貓貓品種介紹 </a></p>
     </div>
-
-  </div>
+<br><br><br><br>
+  </div><br><br><br><br>
 
 
  
-  
-<!-- Image of location/map -->
-<div class="w3-container">
-  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
-</div>
 
 <!-- End page content -->
 </div>
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<!-- Map (full-width aligned with page content) -->
+<div id="map" style="width:100vw; margin-left:calc(-50vw + 50%);">
+  <div class="w3-container w3-padding-32" style="max-width:1564px; margin:0 auto;">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">學校位置</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1807.6385377556812!2d121.54349153881992!3d25.02466942487578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1766991811629!5m2!1szh-TW!2stw" style="width:100%; height:360px; border:0; display:block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+<footer class="w3-center custom-footer w3-padding-16">
+  <p>網站設計與賞析   111407015林芮綺</a></p>
 </footer>
 
 </body>
