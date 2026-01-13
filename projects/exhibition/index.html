@@ -1,257 +1,142 @@
-<!doctype html>
-<html lang="zh-Hant" data-bs-theme="auto">
-
+<!DOCTYPE html>
+<html lang="zh-Hant"></html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
-  <meta name="generator" content="Astro v5.13.2" />
-  <title>展覽介紹
-  </title>
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/" />
-  <script src="../assets/js/color-modes.js"></script>
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <meta name="theme-color" content="#712cf9" />
-  <link href="carousel.css" rel="stylesheet" />
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
+<title>展覽經驗 exhibition experience
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+/* Extend the width of the footer button */
+.footer-button {
+    display: block;
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center and extend to edges */
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1; /* Adjust background color if needed */
+  }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
+  /* Ensure the footer is a full-width rectangle */
+  footer {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center and extend to edges */
+    background-color: #f1f1f1; /* Adjust background color if needed */
+    padding: 20px 0; /* Ensure consistent padding */
+  }
 
-    .b-example-divider {
-      width: 100%;
-      height: 3rem;
-      background-color: #0000001a;
-      border: solid rgba(0, 0, 0, 0.15);
-      border-width: 1px 0;
-      box-shadow:
-        inset 0 0.5em 1.5em #0000001a,
-        inset 0 0.125em 0.5em #00000026;
-    }
+  .footer-button {
+    text-align: center;
+    color: #000; /* Adjust text color if needed */
+    text-decoration: none;
+  }
 
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
+  /* Add background color to the '看更多' button */
+  .more-button {
+    background-color: #d2b48c; /* Light brown color */
+    color: #000; /* Black text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+  }
 
-    .bi {
-      vertical-align: -0.125em;
-      fill: currentColor;
-    }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .btn-bd-primary {
-      --bd-violet-bg: #712cf9;
-      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-      --bs-btn-font-weight: 600;
-      --bs-btn-color: var(--bs-white);
-      --bs-btn-bg: var(--bd-violet-bg);
-      --bs-btn-border-color: var(--bd-violet-bg);
-      --bs-btn-hover-color: var(--bs-white);
-      --bs-btn-hover-bg: #6528e0;
-      --bs-btn-hover-border-color: #6528e0;
-      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-      --bs-btn-active-color: var(--bs-btn-hover-color);
-      --bs-btn-active-bg: #5a23c8;
-      --bs-btn-active-border-color: #5a23c8;
-    }
-
-    .bd-mode-toggle {
-      z-index: 1500;
-    }
-
-    .bd-mode-toggle .bi {
-      width: 1em;
-      height: 1em;
-    }
-
-    .bd-mode-toggle .dropdown-menu .active .bi {
-      display: block !important;
-    }
-  </style>
+  .more-button:hover {
+    background-color: #c2a378; /* Slightly darker brown on hover */
+  }
+</style>
 </head>
-
 <body>
 
-  <!--BANNER-->
-
-
-
-  <main>
-
-
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-    <div class="container marketing">
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140"
-            preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-
-          </svg>
-          <h2 class="fw-normal">人權藝術展</h2>
-          <p>
-            Some representative placeholder content for the three columns of
-            text below the carousel. This is the first column.
-          </p>
-          <p>
-
-          </p>
-        </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140"
-            preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-          </svg>
-          <h2 class="fw-normal">藝術才能班跨域展演</h2>
-          <p>
-            Another exciting bit of representative placeholder content. This
-            time, we've moved on to the second column.
-          </p>
-          <p>
-
-          </p>
-        </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140"
-            preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-          </svg>
-          <h2 class="fw-normal">畢業展</h2>
-          <p>
-            And lastly this, the third column of representative placeholder
-            content.
-          </p>
-          <p>
-
-          </p>
-        </div>
-        <!-- /.col-lg-4 -->
-      </div>
-      <!-- /.row -->
-      <!-- START THE FEATURETTES -->
-      <hr class="featurette-divider" />
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">
-            人權藝術展
-
-          </h2>
-          <p class="lead">
-            Some great placeholder content for the first featurette here.
-            Imagine some exciting prose here.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <svg aria-label="Placeholder: 500x500"
-            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-            preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
-            <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-              500x500
-            </text>
-          </svg>
-        </div>
-      </div>
-      <hr class="featurette-divider" />
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">
-            五校聯合展演
-
-          </h2>
-          <p class="lead">
-            Another featurette? Of course. More placeholder content here to
-            give you an idea of how this layout would work with some actual
-            real-world content in place.
-          </p>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <svg aria-label="Placeholder: 500x500"
-            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-            preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
-            <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-              500x500
-            </text>
-          </svg>
-        </div>
-      </div>
-      <hr class="featurette-divider" />
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">
-            畢業展
-
-          </h2>
-          <p class="lead">
-            And yes, this is the last block of representative placeholder
-            content. Again, not really intended to be actually read, simply
-            here to give you a better view of what this would look like with
-            some actual content. Your content.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <svg aria-label="Placeholder: 500x500"
-            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-            preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
-            <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-              500x500
-            </text>
-          </svg>
-        </div>
-      </div>
-      <hr class="featurette-divider" />
-      <!-- /END THE FEATURETTES -->
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">展覽經驗 exhibition experience</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      
     </div>
-    <!-- /.container -->
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="mt-4"><a href="../../index.html" class="btn btn-link">回首頁</a></p>
+  </div>
+</div>
 
-    </footer>
-  </main>
-  <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="the.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">立體造型作品集</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="christmas1.jpeg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">人權藝術展
+      </h1><br>
+      <p class="w3-large"> </p> 
+      <p class="w3-large w3-text-grey w3-hide-medium"><br>「世界之所以美麗，是因為有各式各樣的人，用不同的顏色填滿它。」<br><br>
+在社會的隱蔽角落，有些聲音被標籤覆蓋，有些靈魂在流言中掙扎。本次展覽由公民課的權利思辨出發，結合素描、彩繪與設計專業，進行了一場跨領域的藝術實踐。<br><br>
+我們在展場中築起一座屏風，邀請觀者走入身心障礙者的內心世界。屏風上我們利用了噴漆及丙烯筆來呈現身障者的內心獨白，以及他們常聽到的那些不友善的聲音。也有那些打著「關心」名義、實則傷人的無形利刃。我們誠摯地邀請每一位觀眾，在此空間中靜心思考：我們曾給予的是溫暖，還是偏見？<br><br>
+讓我們拿起尊重與愛的畫筆，一起構建那道屬於平等的彩虹。
+
+    </div>
+  </div>
+
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="clay.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">藝術才能班跨域展演
+</h1><br>
+      
+      <p class="w3-large"> </p> 
+      <p class="w3-large w3-text-grey w3-hide-medium"><br>這是一場關於「心靈碰撞」的藝術實驗。當音樂遇上美術，原本抽象的聲音擁有了具體的線條，靜止的色彩也隨之躍動了起敏銳的色彩直覺，捕捉音樂中流動的情緒，將每一抹音色化為具體的視覺呈現。
+<br><br>
+同一首曲子，在不同的靈魂裡，折射出完全不同的色彩與形狀。我們邀請您在校園的角落遇見藝術，見證這場視覺與聽覺的極致饗宴。
+</p>
+    </div>
+  </div>
+
+   <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="butter-all .jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">內壢高中24屆美術班畢業展
+</h1><br>
+      <p class="w3-large"> </p> 
+      <p class="w3-large w3-text-grey w3-hide-medium"><br>青春是一段充滿夢想與創意的奇幻旅程，藝術則是這段旅程最美的語言。透過內壢高中第24屆美術班畢業展，我們將見證22位畢業生如何以62件藝術作品，描繪出這段充滿活力與希望的旅程。展覽涵蓋素描、水墨及書法等多元藝術領域，每一幅畫作都融合了青春的熱情與創意的火花。
+<br><br>內壢高中美術班自民國88年成立以來，始終堅持學科與術科並重的教育理念，透過多元化的課程規劃，學生們在老師的指導下，充分發揮了個人的天賦和創造力。<br><br>本次展覽主題「輝 HUl」取自閩南語中「花」的諧音外，更有著熠熠生輝的光，引申充滿了明亮與耀眼，隱喻光明前程的詮釋。此次畢業展展示了學生們三年來的學習與創作成果，每一件作品都是青春的結晶，充滿了對未來的期望與夢想。
+
+</p>
+     
+    </div>
+  </div>
+
+ 
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey">
+   <p class="mt-4"><a href="../../index.html" class="footer-button">回首頁</a></p>
+</footer>
 
 </body>
-
 </html>
